@@ -1,4 +1,5 @@
 import Card from "./Card";
+import PriceTag from "./PriceTag";
 import "../styles/ProductCard.css";
 
 interface ProductCardProps {
@@ -6,6 +7,7 @@ interface ProductCardProps {
   category: string;
   price: number;
   inStock?: boolean;
+  discount?: string;
 }
 
 function ProductCard({
@@ -13,6 +15,7 @@ function ProductCard({
   category,
   price,
   inStock = true,
+  discount,
 }: ProductCardProps) {
   return (
     <Card>
@@ -24,12 +27,18 @@ function ProductCard({
         </p>
 
         <p>
-          <strong>Price:</strong> ${price}
+          <strong>Price:</strong> <PriceTag price={price} />
         </p>
 
         <p>
           <strong>Stock:</strong> {inStock ? "In Stock" : "Out of Stock"}
         </p>
+
+        {discount && (
+          <p>
+            <strong>Discount:</strong> {discount}
+          </p>
+        )}
       </div>
     </Card>
   );

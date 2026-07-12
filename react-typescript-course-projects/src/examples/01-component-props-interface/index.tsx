@@ -7,6 +7,7 @@ function ComponentPropsInterfaceExample() {
         name="Wireless Keyboard"
         category="Accessories"
         price={79.99}
+        discount="15%"
       />
 
       <ProductCard

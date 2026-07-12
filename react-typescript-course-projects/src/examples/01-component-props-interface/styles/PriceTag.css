@@ -1,0 +1,8 @@
+.price-tag {
+  display: inline-block;
+  background-color: #0d6efd;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+}

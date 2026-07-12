@@ -1,11 +1,21 @@
-import Card from "./components/Card";
+import ProductCard from "./components/ProductCard";
 
 function ComponentPropsInterfaceExample() {
   return (
-    <Card>
-      <h2>React Component</h2>
-      <p>This is a simple Card component using the children prop.</p>
-    </Card>
+    <>
+      <ProductCard
+        name="Wireless Keyboard"
+        category="Accessories"
+        price={79.99}
+      />
+
+      <ProductCard
+        name="Gaming Mouse"
+        category="Accessories"
+        price={49.99}
+        inStock={false}
+      />
+    </>
   );
 }
 
